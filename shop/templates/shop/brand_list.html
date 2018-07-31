@@ -1,0 +1,17 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+    <h1>
+        Brands List
+    </h1>
+    {% if brand_list %}
+    <ul>
+        {% for brd in brand_list %}
+        <li><a href="{% url 'brand-detail' brd.pk %}">{{brd.name}}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>
+        There are no brands.
+    </p>
+    {% endif %}
+{% endblock %}

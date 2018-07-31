@@ -1,0 +1,16 @@
+{% extends 'base_generic.html' %}
+{% block title %}
+<title>
+    Home | E-Cart
+</title>
+{% endblock %}
+{% block sidebar %}
+{% endblock %}
+{% block content %}
+<p>
+    <a href="{% url 'brand-list' %}">All Brands</a>
+</p>
+<p>
+    <a href="{% url 'category-list' %}">All categories</a>
+</p>
+{% endblock %}

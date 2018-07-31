@@ -1,0 +1,15 @@
+{% extends  'base_generic.html' %}
+{% block content %}
+<h1>
+    Products in the Category {{category}}
+</h1>
+    <div style="margin-left:20px;margin-top:20px">
+
+    {% for prd in category.product_set.all %}
+    <hr>
+    <p>
+        <a href="{% url 'product-detail' prd.pk %}">{{prd.name}} </a>@ {{prd.price}}
+    </p>
+    {% endfor %}
+  </div>
+{% endblock %}

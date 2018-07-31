@@ -1,0 +1,14 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+{% block title %}
+<title>
+    Registration Success | E-Cart
+</title>
+{% endblock %}
+<h3>
+    Your account was successfully created. Head to the <a href="{% url 'login' %}?next=/">login</a> page to enter the website.
+</h3>
+<p>
+    <a href="{% url 'index' %}">Click here </a>to go to the index page.
+</p>
+{% endblock %}

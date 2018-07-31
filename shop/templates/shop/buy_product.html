@@ -1,0 +1,26 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+{% if error_inventory %}
+<p>
+    <font color="red">
+        {% if error_inventory != '0' %}
+            Quantity exceeds our inventory. You may order upto {{error_inventory}} pieces.
+        {% else %}
+        This product is currently out of stock. You should probably try again later.
+        {% endif %}
+    </font>
+</p>
+{% endif %}
+<p>
+    Product : {{product_name}}
+</p>
+<p>
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{form}}
+    </table>
+    <input type="submit" value="submit">
+</form>
+</p>
+{% endblock %}

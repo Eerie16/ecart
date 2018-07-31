@@ -1,0 +1,18 @@
+{% extends 'base_generic.html' %}
+{% block title %}
+    <title>
+        Register | E-Cart
+    </title>
+{% endblock %}
+{% block content %}
+    <h1 align="Center">
+        Register yourself on E-Cart
+    </h1>
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}    
