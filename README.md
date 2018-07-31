@@ -9,4 +9,4 @@ The superuser account username is admin.
 * User login and registration facility
 * Images in models
 * Django forms
-
+* Pagination
